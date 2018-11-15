@@ -1,13 +1,14 @@
 package main
 
-import(
-	"github.com/gin-gonic/gin"
+import (
 	. "space-base-server/apis"
+
+	"github.com/gin-gonic/gin"
 )
 
-func initRouter() * gin.Engine {
+func initRouter() *gin.Engine {
 	router := gin.Default()
-	
+
 	router.GET("/", IndexApi)
 
 	router.POST("/person", AddPersonApi)
